@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Colony Reference - Building, Vehicles &amp; Researchs</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Ape Apps, William Kuoch">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato|Montserrat" />
+		<link rel="stylesheet" type="text/css" href="datatables.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.yadcf.css" />
+		<!-- Change hash when file updated (style.css and script.js at the bottom) -->
+		<link rel="stylesheet" type="text/css" href="style.css?v=2c1df5df" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/datatables.min.js"></script>
+		<script type="text/javascript" src="js/dataTables.pageResize.min.js"></script>
+		<script type="text/javascript" src="js/jquery.dataTables.yadcf.js"></script>
+
+		<script src="https://www.apewebapps.com/apps/my-colony/0.26.0/game.js"></script>
+		<!-- ALSO UPDATE line 8 of script.js for every new version of the game ! -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-75642810-18', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		 <div id="wrapper">
+
+			<!-- Sidebar -->
+			<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li class="sidebar-brand">
+						<a href="#" id="page-title">
+							My Colony Reference
+						</a>
+					</li>
+					<li>
+						<a href="https://www.apewebapps.com/my-colony/" target="_blank">My Colony Browser</a>
+					</li>
+					<li>
+						<a href="http://forum.ape-apps.com/forumdisplay.php?fid=23" target="_blank">Community</a>
+					</li>
+					<li class="divider-vertical">
+					</li>
+				</ul>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="form-group">
+								<input id="searchdatalist" type="text" class="form-control ptsets" placeholder="Type something: Premium">
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="sidebar-nav">
+					<!-- <li class="sidebar-brand">
+						<a href="#">
+							Filters
+						</a>
+					</li> -->
+					<li>
+							<button type="button" id="clearf" class="btn btn-default">Clear Filters</button>
+					</li>
+					<!-- <li class="disabled">
+						Preset Orderings<br>
+						<ul>
+							<li>Stage, Alphabetical</li>
+							<li>Alphabetical</li>
+							<li>Type</li>
+						</ul>
+					</li> -->
+					<li>
+						Show / Hide (Next update)<br>
+						<!-- <ul>
+							<li><a class="tofilter" href="#">All</a></li>
+							<li><a class="tofilter" href="#">Building</a></li>
+							<li><a class="tofilter" href="#">Pavement</a></li>
+							<li><a class="tofilter" href="#">Vehicle</a></li>
+							<li><a class="tofilter" href="#">Technology</a></li>
+						</ul> -->
+						
+					</li>
+					<li>
+						
+					</li>
+					<li>
+						<a href="#" id="version-number">Data from version</a>
+					</li>
+					<li>
+						<a href="#" id="version-number">Reference version 0.3.0</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /#sidebar-wrapper -->
+
+			<!-- Page Content -->
+			<div id="page-content-wrapper">
+				<div id="item-description" class="container-fluid">
+					<div class="row">
+						<section class="item-desc-header col-sm-12 col-md-12" class="media">
+							<div class="row">
+								<div class="col-sm-2">
+									<img id="item-image" src="..." alt="..." class="item-thumbnail">
+								</div>
+								<div class="col-sm-8">
+									<h3 id="item-name"></h3>
+								</div>
+								<div class="col-sm-2 currency">
+									<h4><a class="item-details-close">Close</a></h4>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="row">
+						<section id="item-caracteristics" class="item-desc-content col-sm-6 col-md-4">
+							<h4>Caracteristics</h4>
+							<div id="item-requirements-tilesize">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-buildlimit">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-occupation">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-workerneeded">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-workers">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-drivespeed">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-storage">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-capacity">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-provideshelter">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-entertain">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-provideutility">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-generate">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-smelt">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-refines">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-harvestkappa">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-links-canbuild">
+								<div class="item-properties"></div>
+							</div>
+							<h5 id="utility-header"><strong>Utilities to operate</strong></h5>
+							<div id="item-requirements-requtility">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-reqfuel">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-tax">
+								<div class="item-properties"></div>
+							</div>
+							<div>
+								<p id="generateorsmelt" class="note"><small>
+								* approximatively 20-25 ticks/second<br>
+								* when worker is needed to operate, tick-rate depends on how many worker are actives:<br>
+								Round duration = <br><code>duration / active workers</code> ticks
+								</small></p>
+							</div>
+													</section>
+						<section id="item-requirements" class="item-desc-content col-sm-3 col-md-4">
+							<h4>Requirements</h4>
+							<div id="item-requirements-stage">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-independence">
+								<div class="item-properties"></div>
+							</div>
+							<div id="item-requirements-tech">
+								<div class="item-properties"></div>
+							</div>
+							<h5><strong>Cost</strong></h5>
+							<div id="item-requirements-buildcost">
+								<div class="item-properties"></div>
+							</div>
+							<h5 id="sell-header"><strong>Sell return value</strong></h5>
+							<div id="item-requirements-sell">
+								<div class="item-properties"></div>
+							</div>
+						</section>
+						<section id="item-links" class="item-desc-content col-sm-3 col-md-4">
+							<div id="item-links-links">
+								<h4 id="links-header">Links</h4> <!-- upgrade to / upgrade from -->
+								<div class="item-properties"></div>
+							</div>
+							<!-- <div id="item-links-canbuild">
+								<div class="item-properties"></div>
+							</div> -->
+							
+						</section>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div id="loading-overlay" class="jumbotron">
+						<h1>Loading References...</h1>
+					</div>
+					<div id="tablecontainer" class="row">
+						<div class="col-lg-12">
+							<table id="examplett" class="display nowrap" width="100%">
+								<thead>
+									<!-- <tr>
+										<td colspan="3"><a href="#menu-toggle" class="" id="menu-toggle"><i class="glyphicon glyphicon-menu-hamburger"></i></a></td>
+									</tr> -->
+									<tr>
+										<!-- Col 1 : Index --> <th></th>
+										<!-- Col 2 : Name --> <th></th>
+										<!-- Col 3 : Type --> <th></th>
+										<!-- Col 4 : Requirements Stage --> <th colspan="2">Requirements</th>
+										<!-- Col 5 : Requirements Independence -->
+										<!-- Col 6 : Building Categories --><th colspan="1">Building</th>
+										<!-- Col 6 : Cost to Build/Unlock Money --> <th colspan="26">Cost to Build or Unlock </th>
+										<!-- Col 7 : Cost to Build/Unlock Food -->
+										<!-- Col 8 : Cost to Build/Unlock Water -->
+										<!-- Col 9 : Cost to Build/Unlock Helium 3 (Added in 0.3.0) -->
+										<!-- Col 10 : Cost to Build/Unlock Rum -->
+										<!-- Col 11 : Cost to Build/Unlock Wood -->
+										<!-- Col 12 : Cost to Build/Unlock Charcoal (Added in 0.3.0) -->
+										<!-- Col 13 : Cost to Build/Unlock Ore -->
+										<!-- Col 14 : Cost to Build/Unlock Regolith (Added in 0.3.0) -->
+										<!-- Col 15 : Cost to Build/Unlock Clay -->
+										<!-- Col 16 : Cost to Build/Unlock Wool -->
+										<!-- Col 17 : Cost to Build/Unlock Steel -->
+										<!-- Col 18 : Cost to Build/Unlock Oil (Added in 0.3.0) -->
+										<!-- Col 19 : Cost to Build/Unlock Gold -->
+										<!-- Col 20 : Cost to Build/Unlock Aluminium -->
+										<!-- Col 21 : Cost to Build/Unlock Uranium -->
+										<!-- Col 22 : Cost to Build/Unlock Pottery -->
+										<!-- Col 23 : Cost to Build/Unlock Plastic (Added in 0.3.0) -->
+										<!-- Col 24 : Cost to Build/Unlock Bricks -->
+										<!-- Col 25 : Cost to Build/Unlock Cloth -->
+										<!-- Col 26 : Cost to Build/Unlock Toy (Added in 0.3.0) -->
+										<!-- Col 27 : Cost to Build/Unlock Microchip -->
+										<!-- Col 28 : Cost to Build/Unlock Atmosphere -->
+										<!-- Col 29 : Cost to Build/Unlock Research -->
+										<!-- Col 30 : Cost to Build/Unlock Civics -->
+										<!-- Col 31 : Cost to Build/Unlock Alien Artifact -->
+										<!-- Last Col : Details --> <th rowspan="2">Details</th>
+									</tr>
+									<tr>
+										<!-- Col 1 : Index --> <th>#</th>
+										<!-- Col 2 : Name --> <th>Name</th>
+										<!-- Col 3 : Type --> <th>Type</th>
+										<!-- Col 4 : Requirements Stage --> <th>Stage</th>
+										<!-- Col 5 : Requirements Independence --> <th>Independence</th>
+										<!-- Col 6 : Building Categories --> <th>Categories</th>
+										<!-- Col 6 : Cost to Build/Unlock Money --> <th>Money</th>
+										<!-- Col 7 : Cost to Build/Unlock Food --> <th>Food</th>
+										<!-- Col 8 : Cost to Build/Unlock Water --> <th>Water</th>
+										<!-- Col 9 : Cost to Build/Unlock Helium 3 (Added in 0.3.0) --> <th>Helium 3</th>
+										<!-- Col 10 : Cost to Build/Unlock Rum --> <th>Rum</th>
+										<!-- Col 11 : Cost to Build/Unlock Wood --> <th>Wood</th>
+										<!-- Col 12 : Cost to Build/Unlock Charcoal (Added in 0.3.0) --> <th>Charcoal</th>
+										<!-- Col 13 : Cost to Build/Unlock Ore --> <th>Ore</th>
+										<!-- Col 14 : Cost to Build/Unlock Regolith (Added in 0.3.0) --> <th>Regolith</th>
+										<!-- Col 15 : Cost to Build/Unlock Clay --> <th>Clay</th>
+										<!-- Col 16 : Cost to Build/Unlock Wool --> <th>Wool</th>
+										<!-- Col 17 : Cost to Build/Unlock Steel --> <th>Steel</th>
+										<!-- Col 18 : Cost to Build/Unlock Oil (Added in 0.3.0) --> <th>Oil</th>
+										<!-- Col 19 : Cost to Build/Unlock Gold --> <th>Gold</th>
+										<!-- Col 20 : Cost to Build/Unlock Aluminium --> <th>Aluminium</th>
+										<!-- Col 21 : Cost to Build/Unlock Uranium --> <th>Uranium</th>
+										<!-- Col 22 : Cost to Build/Unlock Pottery --> <th>Pottery</th>
+										<!-- Col 23 : Cost to Build/Unlock Plastic (Added in 0.3.0) --> <th>Plastic</th>
+										<!-- Col 24 : Cost to Build/Unlock Bricks --> <th>Bricks</th>
+										<!-- Col 25 : Cost to Build/Unlock Cloth --> <th>Cloth</th>
+										<!-- Col 26 : Cost to Build/Unlock Toy (Added in 0.3.0) --> <th>Toy</th>
+										<!-- Col 27 : Cost to Build/Unlock Microchip --> <th>Microchip</th>
+										<!-- Col 28 : Cost to Build/Unlock Atmosphere --> <th>Atmosphere</th>
+										<!-- Col 29 : Cost to Build/Unlock Research --> <th>Research</th>
+										<!-- Col 30 : Cost to Build/Unlock Civics --> <th>Civics</th>
+										<!-- Col 31 : Cost to Build/Unlock Alien Artifact --> <th>Alien Artifact</th>
+										<!-- Last Col : Details --> 
+									</tr>
+
+								</thead>
+								<tfoot>
+									<tr>
+										<!-- Col 1 : Index --> <th>#</th>
+										<!-- Col 2 : Name --> <th>Name</th>
+										<!-- Col 3 : Type --> <th></th>
+										<!-- Col 4 : Requirements Stage --> <th></th>
+										<!-- Col 5 : Requirements Independence --> <th></th>
+										<!-- Col 6 : Building Categories --> <th></th>
+										<!-- Col 6 : Cost to Build/Unlock Money --> <th>Money</th>
+										<!-- Col 7 : Cost to Build/Unlock Food --> <th>Food</th>
+										<!-- Col 8 : Cost to Build/Unlock Water --> <th>Water</th>
+										<!-- Col 9 : Cost to Build/Unlock Helium 3 (Added in 0.3.0) --> <th>Helium 3</th>
+										<!-- Col 10 : Cost to Build/Unlock Rum --> <th>Rum</th>
+										<!-- Col 11 : Cost to Build/Unlock Wood --> <th>Wood</th>
+										<!-- Col 12 : Cost to Build/Unlock Charcoal (Added in 0.3.0) --> <th>Charcoal</th>
+										<!-- Col 13 : Cost to Build/Unlock Ore --> <th>Ore</th>
+										<!-- Col 14 : Cost to Build/Unlock Regolith (Added in 0.3.0) --> <th>Regolith</th>
+										<!-- Col 15 : Cost to Build/Unlock Clay --> <th>Clay</th>
+										<!-- Col 16 : Cost to Build/Unlock Wool --> <th>Wool</th>
+										<!-- Col 17 : Cost to Build/Unlock Steel --> <th>Steel</th>
+										<!-- Col 18 : Cost to Build/Unlock Oil (Added in 0.3.0) --> <th>Oil</th>
+										<!-- Col 19 : Cost to Build/Unlock Gold --> <th>Gold</th>
+										<!-- Col 20 : Cost to Build/Unlock Aluminium --> <th>Aluminium</th>
+										<!-- Col 21 : Cost to Build/Unlock Uranium --> <th>Uranium</th>
+										<!-- Col 22 : Cost to Build/Unlock Pottery --> <th>Pottery</th>
+										<!-- Col 23 : Cost to Build/Unlock Plastic (Added in 0.3.0) --> <th>Plastic</th>
+										<!-- Col 24 : Cost to Build/Unlock Bricks --> <th>Bricks</th>
+										<!-- Col 25 : Cost to Build/Unlock Cloth --> <th>Cloth</th>
+										<!-- Col 26 : Cost to Build/Unlock Toy (Added in 0.3.0) --> <th>Toy</th>
+										<!-- Col 27 : Cost to Build/Unlock Microchip --> <th>Microchip</th>
+										<!-- Col 28 : Cost to Build/Unlock Atmosphere --> <th>Atmosphere</th>
+										<!-- Col 29 : Cost to Build/Unlock Research --> <th>Research</th>
+										<!-- Col 30 : Cost to Build/Unlock Civics --> <th>Civics</th>
+										<!-- Col 31 : Cost to Build/Unlock Alien Artifact --> <th>Alien Artifact</th>
+										<!-- Last Col : Details --> <th>Details</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /#page-content-wrapper -->
+
+		</div>
+		<script src="script.js?v=2c1df5df"></script>
+		<!-- Icons are from http://glyphicons.com/ -->
+	</body>
+</html>
